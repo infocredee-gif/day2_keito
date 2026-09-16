@@ -1,0 +1,11 @@
+/* Motion — Studio's cubic-bezier plus a plain ease-in-out for hovers */
+:root{
+  --ease-brand:cubic-bezier(0.4,0.4,0,1); /* @kind other */
+  --ease-hover:ease-in-out; /* @kind other */
+  --duration-fast:200ms; /* @kind other */
+  --duration-base:300ms; /* @kind other */  /* every hover on the site */
+  --duration-slow:400ms; /* @kind other */  /* scroll-in appear */
+  --duration-slowest:500ms; /* @kind other */
+  --transition-hover:all var(--duration-base) var(--ease-hover); /* @kind other */
+  --transition-appear:opacity var(--duration-slow) var(--ease-brand), transform var(--duration-slow) var(--ease-brand); /* @kind other */
+}

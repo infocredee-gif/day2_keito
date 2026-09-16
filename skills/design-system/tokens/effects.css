@@ -1,0 +1,17 @@
+/* Radius, shadow, border — the site is overwhelmingly square and shadowless */
+:root{
+  --radius-none:0px;   /* default: buttons, cards, images */
+  --radius-sm:2px;
+  --radius-md:6px;
+  --radius-lg:10px;    /* modals / drawer panels only */
+  --radius-circle:50%; /* accent dots */
+
+  --border-hairline-width:1px;
+  --rule-accent-width:3px;
+
+  --shadow-none:none;
+  --shadow-hover:0 4px 8px rgba(0,0,0,0.2);   /* appears on button hover only */
+  --shadow-modal:0px 6px 15px 0px rgba(0,0,0,0.2);
+  --text-shadow-over-image:0px 2px 5px rgba(0,0,0,0.2);
+  --scrim-image:rgba(255,255,255,0.3);
+}

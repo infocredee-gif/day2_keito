@@ -1,0 +1,22 @@
+/* Iconography — the exact two icon fonts the site ships, copied into assets/icons/.
+   Material Icons carries the navigational glyphs (ligature names: arrow_forward, chevron_right,
+   search, launch, menu, phone). Font Awesome 6.4.2 Free Solid + Brands carries UI carets,
+   the hamburger, the close button and all social marks. */
+@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;font-display:block;src:url("../assets/icons/MaterialIcons-Regular.woff2") format("woff2")}
+@font-face{font-family:'Font Awesome 6 Free';font-style:normal;font-weight:900;font-display:block;src:url("../assets/icons/fa-solid-900.woff2") format("woff2")}
+@font-face{font-family:'Font Awesome 6 Brands';font-style:normal;font-weight:400;font-display:block;src:url("../assets/icons/fa-brands-400.woff2") format("woff2")}
+.material-icons{font-family:'Material Icons';font-weight:400;font-style:normal;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased}
+.fa-solid,.fa-brands{display:inline-block;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}
+.fa-solid{font-family:'Font Awesome 6 Free';font-weight:900}
+.fa-brands{font-family:'Font Awesome 6 Brands';font-weight:400}
+/* only the glyphs the site actually uses */
+.fa-caret-down::before{content:"\f0d7"}
+.fa-bars::before{content:"\f0c9"}
+.fa-phone-flip::before{content:"\f879"}
+.fa-circle-xmark::before{content:"\f057"}
+.fa-arrow-up-right-from-square::before{content:"\f08e"}
+.fa-magnifying-glass::before{content:"\f002"}
+.fa-instagram::before{content:"\f16d"}
+.fa-square-youtube::before{content:"\f431"}
+.fa-x-twitter::before{content:"\e61b"}
+.fa-tiktok::before{content:"\e07b"}

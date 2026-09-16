@@ -1,0 +1,11 @@
+/* Minimal element defaults so specimens and kits inherit the brand voice */
+:root{color-scheme:light}
+body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-sans);font-size:var(--text-body);font-weight:var(--fw-regular);line-height:var(--lh-tight);-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none;transition:var(--transition-hover)}
+a:hover{color:var(--link-hover)}
+h1,h2,h3,h4,p{margin:0}
+h1{font-family:var(--font-mincho-display);font-size:var(--text-hero);font-weight:var(--fw-bold);line-height:var(--lh-tight);color:var(--navy-700)}
+h2{font-family:var(--font-mincho);font-size:var(--text-h2);font-weight:var(--fw-regular);line-height:var(--lh-tight);color:var(--text-sub)}
+h3{font-family:var(--font-sans);font-size:var(--text-h3);font-weight:var(--fw-semibold);line-height:var(--lh-tight)}
+img{display:block;max-width:100%}
+*,*::before,*::after{box-sizing:border-box}

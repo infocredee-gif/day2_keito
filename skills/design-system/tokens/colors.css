@@ -1,0 +1,65 @@
+/* Colour — every value below is lifted verbatim from credit-group.ne.jp */
+:root{
+  /* Brand marks (from the CREDEE logo) */
+  --credee-orange:#f39800;
+  --credee-red:#e60012;
+  --credee-black:#231815;
+
+  /* Blues — the corporate spine */
+  --navy-700:#14315c;   /* primary text + headline navy */
+  --navy-900:#14293b;   /* ink, footer text, hairline source */
+  --steel-600:#385c7c;  /* card CTA fill */
+  --slate-600:#4c5f70;  /* mincho subheads */
+  --slate-500:#6b7c8a;  /* captions, meta */
+  --slate-300:#a9b7c2;  /* disabled, faint rules */
+  --sky-200:#bbd2e7;    /* pale section tint / borders */
+
+  /* Oranges — action + emphasis */
+  --orange-500:#f2780e; /* primary button fill */
+  --orange-400:#f78c11; /* link hover, 3px left rules */
+  --orange-300:#ffaf4e; /* highlight, step numbers */
+
+  /* Consumer-facing accents (used in the mega-menus) */
+  --teal-500:#00ac97;
+  --teal-400:#40b19a;
+  --pink-300:#f4b2ba;
+
+  /* Neutrals */
+  --white:#ffffff;
+  --gray-50:#f5f6f7;
+  --gray-100:#f2f2f2;
+  --gray-200:#eeeeee;
+  --gray-700:#333333;
+  --gray-800:#222222;
+
+  /* Semantic aliases — prefer these in product code */
+  --text-primary:var(--navy-700);
+  --text-ink:var(--navy-900);
+  --text-sub:var(--slate-600);
+  --text-muted:var(--slate-500);
+  --text-disabled:var(--slate-300);
+  --text-inverse:var(--white);
+  --text-caption:var(--slate-500);
+
+  --link:var(--navy-700);
+  --link-hover:var(--orange-400);
+
+  --surface-page:var(--white);
+  --surface-alt:var(--gray-50);
+  --surface-tint:var(--sky-200);
+  --surface-ink:var(--navy-900);
+
+  --border-hairline:#14293b33;  /* 20% navy — news rows, dividers */
+  --border-sky:#bbd2e74d;       /* 30% sky — soft panel borders */
+  --border-strong:var(--slate-300);
+  --rule-accent:var(--orange-400); /* the 3px left rule on subheads */
+
+  --button-primary-bg:var(--orange-500);
+  --button-primary-fg:var(--white);
+  --button-secondary-bg:var(--white);
+  --button-secondary-fg:var(--navy-900);
+  --button-tertiary-bg:var(--steel-600);
+  --button-tertiary-fg:var(--white);
+
+  --status-alert:var(--credee-red);
+}

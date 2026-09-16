@@ -1,0 +1,10 @@
+/* Webfonts.
+   Site truth (credit-group.ne.jp): 'Noto Sans JP' for all UI/body text, plus two licensed
+   Morisawa mincho faces served from fonts.studio.design:
+     - 'リュウミン H-KL JIS2004' (Ryumin Heavy) — hero H1
+     - 'A1明朝' (A1 Mincho)      — section subheads / English section labels
+   Those binaries are licence-locked and cannot ship here. SUBSTITUTIONS (Google Fonts):
+     Ryumin Heavy  -> Shippori Mincho B1 700/800  (high-contrast, heavy JP mincho)
+     A1 Mincho     -> Zen Old Mincho 400/700      (softer, rounded-terminal JP mincho)
+   Replace this @import with real @font-face rules if the Morisawa licence is available. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Old+Mincho:wght@400;700&display=swap");

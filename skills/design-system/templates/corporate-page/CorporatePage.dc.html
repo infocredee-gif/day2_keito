@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="コーポレート下層ページ / Corporate section page" description="CREDEE corporate page shell: transparent header, ruled mincho lead, content blocks, footer." -->
+<helmet><meta charset="utf-8"><link rel="icon" href="../../assets/logo/favicon.png"><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;background:#ffffff;display:flex;flex-direction:column;font-family:'Noto Sans JP',sans-serif">
+<x-import component-from-global-scope="CREDEEDesignSystem_2e31d6.SiteHeader" logo-src="../../assets/logo/credee-logo.webp" hint-size="100%,120px"></x-import>
+<main style="flex:1;width:100%;max-width:1200px;margin:0 auto;padding:60px 40px;display:flex;flex-direction:column;gap:60px">
+<div>
+<p style="font-family:'Zen Old Mincho',serif;font-size:40px;line-height:1.4;color:#14315c;margin:0">Technology</p>
+<h2 style="font-family:'Zen Old Mincho',serif;font-size:36px;font-weight:400;line-height:1.4;color:#4c5f70;margin:24px 0 0;padding:20px 30px 30px;border-left:3px solid #f78c11">ここにページの主旨を二行で。<br>結びは。で締めます。</h2>
+</div>
+<div style="display:flex;gap:60px;align-items:flex-start;flex-wrap:wrap">
+<div style="flex:1;min-width:320px;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:15px;line-height:1.8;color:#4c5f70;margin:0">本文をここに。株式会社クレディーは、水溶性もみ殻シリカ（ケイ素）の元祖です。40年余りにわたり、植物由来ケイ素の研究・開発を重ねてきました。</p>
+<p style="font-size:15px;line-height:1.8;color:#4c5f70;margin:0">現在は原料の供給から、健康食品・化粧品の受託製造まで、一貫してお応えできる体制を整えています。</p>
+<x-import component-from-global-scope="CREDEEDesignSystem_2e31d6.Button" variant="primary" size="md" icon="arrow_forward" hint-size="280px,68px">お問い合わせ</x-import>
+</div>
+<img src="../../assets/images/technology.webp" alt="" style="flex:1;min-width:280px;height:360px;object-fit:cover">
+</div>
+<div>
+<p style="font-family:'Zen Old Mincho',serif;font-size:40px;line-height:1.4;color:#14315c;text-align:center;margin:0 0 40px">News</p>
+<x-import component-from-global-scope="CREDEEDesignSystem_2e31d6.NewsList" dc-props="{{ newsProps }}" hint-size="100%,220px"></x-import>
+</div>
+</main>
+<x-import component-from-global-scope="CREDEEDesignSystem_2e31d6.SiteFooter" logo-src="../../assets/logo/credee-logo.webp" hint-size="100%,560px"></x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;news&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;{date:string;title:string;href?:string}[]&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      newsProps: {
+        items: this.props.news ?? [
+          { date: '2026.9.3', title: '機能性水OEM （混ぜ物水）のOEM受託を開始しました。', href: '#' },
+          { date: '2026.9.3', title: '正規販売店に関するお知らせ', href: '#' },
+          { date: '2026.9.3', title: 'コーポレートサイトをリニューアルしました', href: '#' }
+        ]
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

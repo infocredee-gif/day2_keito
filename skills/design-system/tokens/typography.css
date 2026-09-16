@@ -1,0 +1,33 @@
+/* Type — Noto Sans JP for everything functional, mincho for editorial voice */
+:root{
+  --font-sans:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  /* substitute for リュウミン H-KL JIS2004 */
+  --font-mincho-display:'Shippori Mincho B1','Hiragino Mincho ProN','Yu Mincho',serif;
+  /* substitute for A1明朝 */
+  --font-mincho:'Zen Old Mincho','Hiragino Mincho ProN','Yu Mincho',serif;
+  --font-mono:Menlo,Monaco,monospace;
+
+  --fs-11:11px; --fs-13:13px; --fs-14:14px; --fs-15:15px; --fs-16:16px;
+  --fs-18:18px; --fs-20:20px; --fs-22:22px; --fs-24:24px; --fs-26:26px;
+  --fs-28:28px; --fs-36:36px; --fs-40:40px; --fs-50:50px; --fs-62:62px;
+
+  --fw-regular:400; /* @kind font */
+  --fw-medium:500; /* @kind font */
+  --fw-semibold:600; /* @kind font */
+  --fw-bold:700; /* @kind font */
+
+  --lh-tight:1.4; /* @kind font */ /* the site's single line-height for headings AND body */
+  --lh-relaxed:1.8; /* @kind font */ /* long-form prose only (company message, president letter) */
+  --ls-normal:normal; /* @kind font */
+
+  /* Semantic roles */
+  --text-hero:var(--fs-50);
+  --text-h2:var(--fs-36);
+  --text-h3:var(--fs-28);
+  --text-section-label:var(--fs-40);
+  --text-body:var(--fs-16);
+  --text-body-sm:var(--fs-15);
+  --text-nav:var(--fs-15);
+  --text-caption-size:var(--fs-13);
+  --text-meta:var(--fs-14);
+}

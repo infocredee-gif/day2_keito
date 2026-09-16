@@ -1,0 +1,16 @@
+/* Spacing — the literal step values used across the site (not a 4/8 grid) */
+:root{
+  --space-2:2px; --space-4:4px; --space-8:8px; --space-10:10px; --space-12:12px;
+  --space-15:15px; --space-16:16px; --space-20:20px; --space-24:24px; --space-30:30px;
+  --space-32:32px; --space-40:40px; --space-44:44px; --space-46:46px; --space-60:60px;
+
+  --page-gutter:40px;        /* header / section side padding, desktop */
+  --page-gutter-mobile:12px; /* the site drops straight to 12px */
+  --section-padding-y:60px;
+  --section-gap:40px;
+  --content-max:1200px;
+  --header-height:120px;     /* logo block height, desktop */
+  --header-height-mobile:80px;
+  --news-row-padding:24px;
+  --news-row-gap:32px;
+}
