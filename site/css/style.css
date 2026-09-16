@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho+B1:wght@700&family=Zen+Old+Mincho:wght@400;700&display=swap");
+
+/* ============================================================
+   design-application.md の「採用する値」と1対1で対応させています。
+   ここを直せばサイト全体の見た目が変わります。
+   ============================================================ */
+:root{
+  /* 色 */
+  --navy-700:#14315c;      /* 主な文字色・見出し */
+  --navy-900:#14293b;      /* 濃い文字・罫線のもと */
+  --slate-600:#4c5f70;     /* 明朝の中見出し */
+  --slate-500:#6b7c8a;     /* 補足・キャプション */
+  --orange-500:#f2780e;    /* 行動を促す色（購入ボタン） */
+  --orange-400:#f78c11;    /* リンクのホバー・3pxの縦罫 */
+  --steel-600:#385c7c;     /* 副ボタン */
+  --white:#ffffff;
+  --gray-50:#f5f6f7;       /* 交互セクションの背景 */
+  --border-hairline:#14293b33;
+
+  /* 文字 */
+  --font-sans:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  --font-mincho-display:'Shippori Mincho B1','Hiragino Mincho ProN','Yu Mincho',serif;
+  --font-mincho:'Zen Old Mincho','Hiragino Mincho ProN','Yu Mincho',serif;
+  --lh-tight:1.4;
+  --lh-relaxed:1.8;
+
+  /* 余白 */
+  --space-4:4px;  --space-8:8px;   --space-12:12px; --space-16:16px;
+  --space-20:20px;--space-24:24px; --space-30:30px; --space-40:40px; --space-60:60px;
+  --page-gutter:40px;
+  --content-max:1200px;
+  --section-padding-y:60px;
+
+  /* 形・動き */
+  --radius-none:0px;
+  --shadow-hover:0 4px 8px rgba(0,0,0,.2);
+  --transition-hover:all 300ms ease-in-out;
+  --ease-brand:cubic-bezier(.4,.4,0,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--white);color:var(--navy-700);
+  font-family:var(--font-sans);font-size:16px;line-height:var(--lh-tight);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;                 /* 横へのはみ出しを止める保険 */
+}
+img{display:block;max-width:100%}
+a{color:var(--navy-700);text-decoration:none;transition:var(--transition-hover)}
+a:hover{color:var(--orange-400)}
+h1,h2,h3,h4,p,dl,dd{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+/* 画面読み上げ用（目には見えないが読み上げられる） */
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* キーボード操作時の枠。元のサイトでは未定義だったため、ここで補っています */
+a:focus-visible,button:focus-visible{outline:3px solid var(--orange-400);outline-offset:2px}
+
+/* ---------- 共通の枠 ---------- */
+.wrap{width:100%;max-width:var(--content-max);margin:0 auto;padding:0 var(--page-gutter)}
+.section{padding:var(--section-padding-y) 0}
+.section--alt{background:var(--gray-50)}
+
+.label{
+  font-family:var(--font-mincho);font-size:32px;font-weight:400;
+  color:var(--navy-700);text-align:center;margin:0 0 var(--space-8)
+}
+.label__ja{
+  display:block;font-family:var(--font-sans);font-size:13px;font-weight:500;
+  color:var(--slate-500);letter-spacing:.08em;margin-top:var(--space-4)
+}
+.h2{
+  font-family:var(--font-mincho);font-size:36px;font-weight:400;
+  line-height:var(--lh-tight);color:var(--slate-600);
+  border-left:3px solid var(--orange-400);padding:var(--space-20) var(--space-30) var(--space-30)
+}
+.h3{font-family:var(--font-sans);font-size:20px;font-weight:600;line-height:var(--lh-tight);color:var(--navy-700)}
+.body{font-size:16px;line-height:var(--lh-relaxed);color:var(--navy-700)}
+.note{font-size:13px;line-height:var(--lh-relaxed);color:var(--slate-500)}
+
+/* 未確定の情報。公開前に必ず差し替える箇所 */
+.todo{
+  display:inline-block;background:#fff3e0;color:#8a4b00;
+  border:1px solid var(--orange-400);font-size:13px;font-weight:500;
+  padding:2px var(--space-8);line-height:1.6
+}
+
+/* ---------- ボタン ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:var(--space-12);
+  min-height:64px;padding:0 var(--space-30);
+  font-family:var(--font-sans);font-size:18px;font-weight:600;line-height:var(--lh-tight);
+  border:none;border-radius:var(--radius-none);cursor:pointer;text-align:center;
+  transition:var(--transition-hover)
+}
+.btn:hover{box-shadow:var(--shadow-hover)}
+.btn--primary{background:var(--orange-500);color:var(--white)}
+.btn--primary:hover{color:var(--white)}
+.btn--secondary{background:var(--steel-600);color:var(--white)}
+.btn--secondary:hover{color:var(--white)}
+.btn--full{width:100%}
+
+/* ---------- ヘッダー ---------- */
+.header{
+  display:flex;align-items:center;justify-content:space-between;gap:var(--space-20);
+  padding:var(--space-20) var(--page-gutter);background:var(--white);
+  border-bottom:1px solid var(--border-hairline);flex-wrap:wrap
+}
+.header__logo img{height:56px;width:auto;object-fit:contain}
+.header__nav{display:flex;align-items:center;gap:var(--space-24);flex-wrap:wrap}
+.header__nav a{display:inline-flex;align-items:center;min-height:44px;font-size:15px}
+.header__cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 var(--space-20);
+  background:var(--orange-500);color:var(--white);font-size:15px;font-weight:600
+}
+.header__cta:hover{color:var(--white);box-shadow:var(--shadow-hover)}
+
+/* ---------- テスト用の帯 ---------- */
+.testbar{
+  background:var(--navy-900);color:var(--white);
+  font-size:13px;line-height:1.6;text-align:center;padding:var(--space-12) var(--space-16)
+}
+
+/* ---------- ヒーロー ---------- */
+.hero{position:relative;background:var(--gray-50)}
+.hero__img{width:100%;height:520px;object-fit:cover;object-position:right center}
+.hero__inner{
+  position:absolute;inset:0;display:flex;align-items:center;
+  width:100%;max-width:var(--content-max);margin:0 auto;padding:0 var(--page-gutter)
+}
+.hero__box{max-width:600px;display:flex;flex-direction:column;gap:var(--space-24)}
+.hero__eyebrow{font-size:14px;font-weight:500;letter-spacing:.12em;color:var(--slate-500)}
+.hero__title{
+  font-family:var(--font-mincho-display);font-size:40px;font-weight:700;
+  line-height:var(--lh-tight);color:var(--navy-700)
+}
+.hero__lead{font-size:16px;line-height:var(--lh-relaxed);color:var(--navy-700)}
+.hero__actions{display:flex;gap:var(--space-16);flex-wrap:wrap}
+
+/* ---------- 3つの特長 ---------- */
+.points{display:flex;gap:var(--space-40);flex-wrap:wrap}
+.point{flex:1;min-width:240px;display:flex;flex-direction:column;gap:var(--space-12);
+  padding-top:var(--space-24);border-top:3px solid var(--orange-400)}
+.point__n{font-family:var(--font-mincho-display);font-size:40px;color:var(--orange-400);line-height:1.1}
+.point__body{font-size:15px;line-height:var(--lh-relaxed);color:var(--slate-600)}
+
+/* ---------- 2カラム（写真＋文章） ---------- */
+.split{display:flex;gap:var(--space-40);align-items:flex-start;flex-wrap:wrap}
+.split__media{flex:1 1 380px;min-width:0}
+.split__media img{width:100%;height:auto}
+.split__body{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:var(--space-20)}
+
+/* ---------- 3カラムカード ---------- */
+.cards{display:flex;gap:var(--space-40);flex-wrap:wrap}
+.card{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:var(--space-16)}
+.card img{width:100%;height:220px;object-fit:cover}
+.card__body{font-size:14px;line-height:var(--lh-relaxed);color:var(--slate-600)}
+
+/* ---------- STEP ---------- */
+.step{display:flex;gap:var(--space-24);align-items:flex-start;
+  padding:var(--space-24) 0;border-bottom:1px solid var(--border-hairline)}
+.step__n{flex:none;width:72px;text-align:center}
+.step__n span{display:block;font-size:13px;font-weight:500;letter-spacing:.08em;color:var(--slate-500)}
+.step__n strong{font-family:var(--font-mincho-display);font-size:40px;font-weight:700;color:var(--orange-400);line-height:1.1}
+.step__txt{min-width:0;display:flex;flex-direction:column;gap:var(--space-8)}
+
+/* ---------- 仕様表 ---------- */
+.spec{width:100%}
+.spec__row{display:flex;gap:var(--space-30);align-items:flex-start;
+  padding:var(--space-24) 0;border-bottom:1px solid var(--border-hairline)}
+.spec__row dt{flex:none;width:160px;font-size:15px;font-weight:500;color:var(--navy-700)}
+.spec__row dd{margin:0;font-size:15px;line-height:var(--lh-relaxed);color:var(--slate-600);min-width:0}
+
+/* ---------- よくある質問 ---------- */
+.qa{border-bottom:1px solid var(--border-hairline);padding:var(--space-24) 0}
+.qa__q{font-size:16px;font-weight:600;color:var(--navy-700);margin-bottom:var(--space-8)}
+.qa__a{font-size:15px;line-height:var(--lh-relaxed);color:var(--slate-600)}
+
+/* ---------- 購入 ---------- */
+.buy{display:flex;gap:var(--space-40);align-items:center;flex-wrap:wrap}
+.buy__media{flex:1 1 300px;min-width:0}
+.buy__media img{width:100%;height:auto}
+.buy__body{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:var(--space-16)}
+.buy__price{font-family:var(--font-mincho-display);font-size:36px;font-weight:700;color:var(--navy-700)}
+
+/* ---------- フッター ---------- */
+.footer{background:var(--gray-50);padding:var(--space-60) 0 var(--space-24)}
+.footer__cols{display:flex;gap:var(--space-40);flex-wrap:wrap;margin-bottom:var(--space-40)}
+.footer__col{flex:1 1 200px;min-width:0;display:flex;flex-direction:column;gap:var(--space-4)}
+.footer__col h3{font-size:15px;font-weight:500;color:var(--navy-700);margin-bottom:var(--space-4)}
+.footer__col p{font-size:15px;color:var(--navy-700)}
+.footer__col a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;color:var(--navy-700)}
+.footer__bar{display:flex;gap:var(--space-24);justify-content:space-between;align-items:flex-end;
+  flex-wrap:wrap;padding-top:var(--space-24);border-top:1px solid var(--border-hairline)}
+.footer__logo img{height:48px;width:auto;object-fit:contain;margin-bottom:var(--space-8)}
+.footer__meta{font-size:14px;color:var(--navy-700);line-height:1.8}
+.footer__copy{text-align:center;font-size:13px;color:var(--slate-500);margin-top:var(--space-24)}
+
+/* ---------- スクロールで現れる動き ---------- */
+/* JavaScript が動く環境でだけ隠します。動かない環境では最初から見えたままです。
+   （隠してから表示する作りにすると、JSが失敗したときに本文が読めなくなります） */
+.js-anim .appear{opacity:0;transform:translateY(8px);
+  transition:opacity 400ms var(--ease-brand),transform 400ms var(--ease-brand)}
+.js-anim .appear.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js-anim .appear{opacity:1;transform:none;transition:none}
+}
+
+/* ============================================================
+   スマホ幅。左右の余白は40px→12pxへ一段で落とします（元サイトと同じ）
+   ============================================================ */
+@media (max-width:860px){
+  :root{--page-gutter:12px;--section-padding-y:40px}
+
+  .header{padding:var(--space-12)}
+  .header__logo img{height:44px}
+  .header__nav{display:none}          /* 1ページ構成なので、狭い幅では購入ボタンだけ残す */
+  .header__cta{min-height:44px;padding:0 var(--space-16);font-size:14px}
+
+  .hero__img{height:440px;object-position:72% center}
+  .hero__inner{position:static;padding:var(--space-30) var(--page-gutter) var(--space-40)}
+  .hero{display:flex;flex-direction:column-reverse}
+  .hero__title{font-size:28px}
+  .hero__box{max-width:none}
+  .hero__actions .btn{width:100%}
+
+  .h2{font-size:24px;padding:var(--space-12) var(--space-16) var(--space-20)}
+  .label{font-size:26px}
+  .body{font-size:15px}
+
+  .points,.cards,.split,.buy,.footer__cols{gap:var(--space-30)}
+  .card img{height:200px}
+  .split{flex-direction:column}
+  .spec__row{flex-direction:column;gap:var(--space-8)}
+  .spec__row dt{width:auto}
+  .step__n{width:56px}
+  .step__n strong{font-size:32px}
+  .buy__price{font-size:28px}
+  .btn{width:100%;min-height:56px;font-size:16px}
+}
