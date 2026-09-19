@@ -1,0 +1,36 @@
+.comingsoon-legacy {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 100px 20px 140px;
+  text-align: center;
+}
+.comingsoon-legacy h2 {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
+  font-size: clamp(24px, 3.4vw, 32px);
+  font-weight: 700;
+  color: #14315C !important;
+  margin: 0 0 20px;
+  letter-spacing: 0.05em;
+}
+.comingsoon-legacy p {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
+  font-size: 15px;
+  line-height: 2;
+  color: #14315C !important;
+  margin: 0 0 36px;
+}
+.comingsoon-legacy .comingsoon-home-btn {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
+  display: inline-block;
+  padding: 14px 36px;
+  background: #14315C;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.comingsoon-legacy .comingsoon-home-btn:hover {
+  opacity: 0.85;
+}
